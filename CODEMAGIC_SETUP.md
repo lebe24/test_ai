@@ -88,17 +88,42 @@ After configuring correctly, the build log should show:
 - ✅ **Provisioned devices**: Empty (App Store profiles don't have device restrictions)
 - ✅ **Certificate type**: `Apple Distribution`
 - ✅ **Upload succeeds** to App Store Connect
+- ✅ **Build processing completes** (usually 5-15 minutes)
+- ✅ **Build appears in TestFlight** after beta information is filled in
 
 ## TestFlight Distribution
 
-Once uploaded successfully:
+### Step 1: Fill in Required Beta App Information
+
+Before you can submit builds to TestFlight, you must fill in the required beta test information:
+
+1. Go to [App Store Connect → TestFlight → Test Information](https://appstoreconnect.apple.com/apps/6757089477/testflight/test-info)
+   - Direct link for your app: https://appstoreconnect.apple.com/apps/6757089477/testflight/test-info
+
+2. **Fill in Beta App Information**:
+   - **Feedback Email**: Your email address for beta tester feedback
+
+3. **Fill in Beta App Review Information** (Required for external testing):
+   - **First Name**: Your first name
+   - **Last Name**: Your last name
+   - **Phone Number**: Your contact phone number
+   - **Email**: Your contact email address
+
+4. **Save** the information
+
+### Step 2: Submit Build to TestFlight
+
+Once the beta information is filled in:
 
 1. **Wait for processing**: App Store Connect will process the build (usually 5-15 minutes)
-2. **Add to TestFlight**: Go to App Store Connect → TestFlight
-3. **Add internal testers**: Add your Apple ID email as an internal tester
+2. **Submit to TestFlight**: The build should automatically submit, or you can manually submit it
+3. **Add internal testers**: Go to App Store Connect → TestFlight → Internal Testing
+   - Add your Apple ID email as an internal tester
 4. **Install TestFlight app**: Install TestFlight from App Store on your device
-5. **Accept invitation**: Accept the TestFlight invitation email
+5. **Accept invitation**: Accept the TestFlight invitation email (for external testing)
 6. **Install your app**: Open TestFlight app and install your app
+
+**Note**: For internal testing, you don't need to fill in the Beta App Review Information, but it's required for external testing.
 
 ## Important Notes
 
